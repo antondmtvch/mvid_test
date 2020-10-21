@@ -1,0 +1,9 @@
+venv
+.idea
+*.pyc
+*.pyo
+**/__pycache__/
+**/data/
+**/logs/
+*.csv
+*.h5
