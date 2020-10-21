@@ -12,4 +12,4 @@ class BaseConfig:
 
 
 class DevelopmentConfig(BaseConfig):
-    DEBUG = False
+    DEBUG = True
