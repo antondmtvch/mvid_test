@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 
 class BaseConfig:
@@ -7,7 +8,7 @@ class BaseConfig:
     APP_HOST = '127.0.0.1'
     APP_PORT = 8080
 
-    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    ROOT_DIR = Path(__file__).resolve().parent.parent
     DATASET_PATH = os.path.join(ROOT_DIR, 'data/recommends.csv')
 
 
