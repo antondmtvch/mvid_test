@@ -3,7 +3,7 @@ import sys
 import logging
 import pandas as pd
 
-from config import BaseConfig as conf
+from app.config import BaseConfig as conf
 
 logging.basicConfig(level=logging.INFO)
 
@@ -15,7 +15,7 @@ def dataset2hd5():
         return
     try:
         data = pd.read_csv(conf.DATASET_PATH, names=conf.DATASET_COLS, dtype=conf.DATASET_DTYPES)
-        data.to_feather(conf.HD5_PATH, compression='lz4')
+        data.to_feather(conf.HD5_PATH)
         logging.info(f'Completed! Save file to {conf.HD5_PATH}')
     except Exception as err:
         logging.error(err)

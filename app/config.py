@@ -9,7 +9,7 @@ class BaseConfig:
     APP_HOST = '127.0.0.1'
     APP_PORT = 5000
 
-    ROOT_DIR = Path(__file__).resolve().parent
+    ROOT_DIR = Path(__file__).resolve().parent.parent
     DATASET_PATH = os.path.join(ROOT_DIR, 'data/recommends.csv')
     HD5_PATH = os.path.join(ROOT_DIR, 'data/recommends.hd5')
 
