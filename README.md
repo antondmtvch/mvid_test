@@ -42,59 +42,61 @@ $ curl --location --request GET 'http://127.0.0.1:5000/recommendations?sku=Sm3QY
 ```
 ## ApacheBench
 ```
-$ ab -n 50000 -c 50 -r http://127.0.0.1:8080/recommendations?sku=Sm3QYKG2uA
+$ ab -n 15000 -c 50 -r http://127.0.0.1:5000/recommendations?sku=Sm3QYKG2uA
 
 This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
 Benchmarking 127.0.0.1 (be patient)
-Completed 5000 requests
-Completed 10000 requests
+Completed 1500 requests
+Completed 3000 requests
+Completed 4500 requests
+Completed 6000 requests
+Completed 7500 requests
+Completed 9000 requests
+Completed 10500 requests
+Completed 12000 requests
+Completed 13500 requests
 Completed 15000 requests
-Completed 20000 requests
-Completed 25000 requests
-Completed 30000 requests
-Completed 35000 requests
-Completed 40000 requests
-Completed 45000 requests
-Completed 50000 requests
-Finished 50000 requests
+Finished 15000 requests
 
 
 Server Software:        Werkzeug/1.0.1
 Server Hostname:        127.0.0.1
-Server Port:            8080
+Server Port:            5000
 
 Document Path:          /recommendations?sku=Sm3QYKG2uA
-Document Length:        2206 bytes
+Document Length:        3618 bytes
 
 Concurrency Level:      50
-Time taken for tests:   2107.620 seconds
-Complete requests:      50000
+Time taken for tests:   616.441 seconds
+Complete requests:      15000
 Failed requests:        0
-Total transferred:      117650000 bytes
-HTML transferred:       110300000 bytes
-Requests per second:    23.72 [#/sec] (mean)
-Time per request:       2107.620 [ms] (mean)
-Time per request:       42.152 [ms] (mean, across all concurrent requests)
-Transfer rate:          54.51 [Kbytes/sec] received
+Total transferred:      56475000 bytes
+HTML transferred:       54270000 bytes
+Requests per second:    24.33 [#/sec] (mean)
+Time per request:       2054.803 [ms] (mean)
+Time per request:       41.096 [ms] (mean, across all concurrent requests)
+Transfer rate:          89.47 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.5      0      28
-Processing:   106 2106 243.2   2138    3173
-Waiting:       94 2078 237.8   2101    3171
-Total:        106 2107 243.1   2138    3173
+Connect:        0    0   0.8      1      84
+Processing:   105 2051 262.6   2091    2955
+Waiting:       92 2024 257.2   2054    2935
+Total:        105 2052 262.5   2092    2955
+WARNING: The median and mean for the initial connection time are not within a normal deviation
+        These results are probably not that reliable.
 
 Percentage of the requests served within a certain time (ms)
-  50%   2138
-  66%   2228
-  75%   2280
-  80%   2311
-  90%   2392
-  95%   2459
-  98%   2537
-  99%   2594
- 100%   3173 (longest request)
+  50%   2092
+  66%   2187
+  75%   2239
+  80%   2271
+  90%   2358
+  95%   2424
+  98%   2491
+  99%   2552
+ 100%   2955 (longest request)
 ```
