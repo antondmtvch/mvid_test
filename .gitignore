@@ -6,4 +6,3 @@ venv
 **/data/
 **/logs/
 *.csv
-*.h5
