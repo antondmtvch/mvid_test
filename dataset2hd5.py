@@ -3,7 +3,7 @@ import sys
 import logging
 import pandas as pd
 
-from app.config import BaseConfig as conf
+from config import BaseConfig as conf
 
 logging.basicConfig(level=logging.INFO)
 
